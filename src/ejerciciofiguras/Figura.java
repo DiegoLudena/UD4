@@ -1,6 +1,6 @@
 package ejerciciofiguras;
 
-public class Figura {
+public abstract class Figura {
 	protected String nombre;
 	protected String color;
 	protected double perimetro;
@@ -50,7 +50,7 @@ public class Figura {
 	
 	//metodo dime_caracteristicas()
 	public void dime_caracteristicas() {
-		System.out.println("Esta figura es un " + this.getNombre() +" de color " +this.getColor() + ". Su perímetro es de " +this.getPerimetro() +"cm, y su área es de " +this.getArea()+ "cm//u00B2");
+		System.out.println("Esta figura es un " + this.getNombre() +" de color " +this.getColor() + ". Su perímetro es de " +this.getPerimetro() +"cm, y su área es de " +this.getArea()+ "cm\u00B2");
 	}
 
 }

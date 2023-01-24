@@ -30,11 +30,9 @@ public class ClasePrincipal {
 			else {
 				System.out.println("Es un " +miRectangulo.getNombre());
 			}
-			System.out.println("El área es " +miRectangulo.getArea());
-			System.out.println("El perímetro es " +miRectangulo.getPerimetro());
-					
-			
-			
+			System.out.println("El área es " +miRectangulo.getArea() +"cm\u00B2.");
+			System.out.println("El perímetro es " +miRectangulo.getPerimetro() +"cm.");		
+			miRectangulo.dime_caracteristicas();
 			break;
 		default: 
 			System.out.println("Opción inválida");
