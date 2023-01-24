@@ -1,5 +1,38 @@
 package ejerciciofiguras;
 
-public class Rectangulo {
+public class Rectangulo extends Figura{
+	private double base;
+	private double altura;
+	
+	public Rectangulo(String nombre, String color, double perimetro, double area, double base, double altura) {
+		super(nombre, color, perimetro, area);
+		this.base = base;
+		this.altura = altura;
+		}
 
+	public double getBase() {
+		return base;
+	}
+
+	public void setBase(double base) {
+		this.base = base;
+	}
+
+	public double getAltura() {
+		return altura;
+	}
+
+	public void setAltura(double altura) {
+		this.altura = altura;
+	}
+	
+	public boolean comprobarCuadrado() {
+		if (this.getAltura() == this.getBase()){
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
 }

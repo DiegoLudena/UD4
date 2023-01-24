@@ -8,7 +8,6 @@ public class Figura {
 	
 	//Constructor
 	public Figura(String nombre, String color, double perimetro, double area) {
-		super();
 		this.nombre = nombre;
 		this.color = color;
 		this.perimetro = perimetro;
@@ -51,7 +50,7 @@ public class Figura {
 	
 	//metodo dime_caracteristicas()
 	public void dime_caracteristicas() {
-		System.out.println("Esta figura es un " +nombre +" de color " +color + ". Su perímetro es de " +perimetro +"cm, y su área es de " +area+ "cm//u00B2");
+		System.out.println("Esta figura es un " + this.getNombre() +" de color " +this.getColor() + ". Su perímetro es de " +this.getPerimetro() +"cm, y su área es de " +this.getArea()+ "cm//u00B2");
 	}
 
 }
