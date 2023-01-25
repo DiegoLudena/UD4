@@ -6,13 +6,17 @@ public class ClasePrincipal {
 
 	public static void main(String[] args) {
 		menu();
+	}
+		public static void menu() {
+			System.out.println("   FIGURAS PLANAS \n----------------------");
+			System.out.println("1. Crear un triángulo \n2. Crear un rectángulo \n\n Escoge una opción:");
 		
 		Scanner scanner = new Scanner(System.in);
 		int opcion = scanner.nextInt();
 		
 		switch (opcion) {
 		case 1 :
-			Triangulo miTriangulo = new Triangulo ("Triangulo", "Amarillo", 2, 5, 8, 6.93);
+			Triangulo miTriangulo = new Triangulo ("Triangulo", "Amarillo", 8, 8, 8, 6.93);
 			miTriangulo.dime_caracteristicas();
 			miTriangulo.tipoTriangulo();
 			break;
@@ -40,10 +44,6 @@ public class ClasePrincipal {
 			System.out.println("Opción inválida");
 			menu();
 		}
-	}
-	public static void menu() {
-		System.out.println("   FIGURAS PLANAS \n----------------------");
-		System.out.println("1. Crear un triángulo \n2. Crear un rectángulo \n\n Escoge una opción:");
 
 	}
 
