@@ -1,5 +1,5 @@
 package ejerciciofiguras;
-
+//importo el Scanner para poder introducir datos, y MismatchException para poder evitar que se introduzcan letras en los menus
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
@@ -9,9 +9,8 @@ public class ClasePrincipal {
 		menu();
 	}
 		public static void menu() {
-			
-			System.out.println("   FIGURAS PLANAS \n----------------------");
-			System.out.println("1. Crear un triángulo \n2. Crear un rectángulo \n\n Escoge una opción:");
+			//No se si poner varios espacios es la mejor manera de dar formato al menu. \t deja un espacio demasiado grande para mi gusto.
+			System.out.println("   FIGURAS PLANAS \n---------------------- \n1. Crear un triángulo \n2. Crear un rectángulo \n\n Escoge una opción:");
 		
 			Scanner scanner = new Scanner(System.in);
 			int opcion = scanner.nextInt();
@@ -29,6 +28,7 @@ public class ClasePrincipal {
 						String color = scanner.next();
 						System.out.println("Indica la longitud de la base:");
 						double base = scanner.nextDouble();
+						//evito numeros negativos en la base y la altura
 						while (base <=0) {
 							System.out.println("Valor negativo no valido. Indica un número positivo:");
 							base = scanner.nextDouble();
@@ -61,7 +61,7 @@ public class ClasePrincipal {
 					System.out.println("Opción inválida");
 					menu();
 				}
-			} catch (InputMismatchException e){
+			} catch (InputMismatchException e){ //con el try y catch evito que se introduzcan lertas en el menu
 				System.out.println("No has introducido un numero. \nPorfavor introduce un numero");
 				menu(); 
 			}

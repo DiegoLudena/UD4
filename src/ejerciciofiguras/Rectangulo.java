@@ -4,6 +4,7 @@ public class Rectangulo extends Figura{
 	private double base;
 	private double altura;
 	
+	//Constructor
 	
 	public Rectangulo(String nombre, String color, double base, double altura) {
 		super(nombre, color,2*base+2*altura, base*altura);
@@ -11,6 +12,8 @@ public class Rectangulo extends Figura{
 		this.altura = altura;
 		
 		}
+	
+	//getters y setters
 
 	public double getBase() {
 		return base;
@@ -36,6 +39,7 @@ public class Rectangulo extends Figura{
 		this.area = base*altura;
 	}
 	
+	//metodo comprobarCuadrado. Comprueba si los lados son iguales o distintos y devuelve un booleano
 	public boolean comprobarCuadrado() {
 		if (this.getAltura() == this.getBase()){
 			return true;

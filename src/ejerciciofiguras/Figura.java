@@ -14,7 +14,7 @@ public abstract class Figura {
 		this.area = area;
 	}
 	
-	//getter y setters
+	//getters y setters
 
 	public String getNombre() {
 		return nombre;

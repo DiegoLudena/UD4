@@ -6,6 +6,7 @@ public class Triangulo extends Figura{
 		private double ladoc;
 		private double altura;
 		
+		//Constructor
 		public Triangulo(String nombre, String color, double ladoa, double ladob, double ladoc, double altura) {
 			super(nombre, color, ladoa+ladob+ladoc, ladoa*altura/2);
 			this.ladoa = ladoa;
@@ -13,6 +14,8 @@ public class Triangulo extends Figura{
 			this.ladoc = ladoc;
 			this.altura = altura;
 		}
+
+		//getters y setters
 
 		public double getLadoa() {
 			return ladoa;
@@ -46,6 +49,7 @@ public class Triangulo extends Figura{
 			this.altura = altura;
 		}
 		
+		//metodo tipoTriangulo. Comprueba si los lados son los tres iguales ==equilatero, dos iguales y otro diferente == isosceles o ninguno igual == escaleno
 		public void tipoTriangulo() {
 			if (this.getLadoa() == this.getLadob() && this.getLadoa() == this.getLadoc()) {
 				System.out.println("Este triángulo es equilátero.");	
