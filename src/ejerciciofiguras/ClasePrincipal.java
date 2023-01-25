@@ -27,12 +27,19 @@ public class ClasePrincipal {
 					try {
 						System.out.println("Indica el color del rectángulo:");
 						String color = scanner.next();
-						System.out.println("Indica la longitud de la base");
+						System.out.println("Indica la longitud de la base:");
 						double base = scanner.nextDouble();
+						while (base <=0) {
+							System.out.println("Valor negativo no valido. Indica un número positivo:");
+							base = scanner.nextDouble();
+							}
 						
-						System.out.println("Indica la longitud de la altura");
+						System.out.println("Indica la longitud de la altura:");
 						double altura = scanner.nextDouble();
-						
+						while (altura <=0) {
+							System.out.println("Valor negativo no valido. Indica un número positivo:");
+							altura = scanner.nextDouble();
+							}
 						
 						Rectangulo miRectangulo = new Rectangulo("Rectangulo", color, base, altura);
 						if (miRectangulo.comprobarCuadrado() == true){
@@ -46,7 +53,7 @@ public class ClasePrincipal {
 						System.out.println("El perímetro es " +miRectangulo.getPerimetro() +"cm.");		
 						break;
 					} catch (InputMismatchException e){
-						System.out.println("No has introducido un numero. \nPorfavor introduzca un numero");
+						System.out.println("No has introducido un numero. \nPorfavor introduce un numero");
 						menu();
 					}
 					
@@ -55,7 +62,7 @@ public class ClasePrincipal {
 					menu();
 				}
 			} catch (InputMismatchException e){
-				System.out.println("No has introducido un numero. \nPorfavor introduzca un numero");
+				System.out.println("No has introducido un numero. \nPorfavor introduce un numero");
 				menu(); 
 			}
 	}
