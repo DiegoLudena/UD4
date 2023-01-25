@@ -12,6 +12,9 @@ public class ClasePrincipal {
 		
 		switch (opcion) {
 		case 1 :
+			Triangulo miTriangulo = new Triangulo ("Triangulo", "Amarillo", 2, 5, 8, 6.93);
+			miTriangulo.dime_caracteristicas();
+			miTriangulo.tipoTriangulo();
 			break;
 		case 2:
 			System.out.println("Indica el color del rectángulo:");
@@ -32,7 +35,6 @@ public class ClasePrincipal {
 			}
 			System.out.println("El área es " +miRectangulo.getArea() +"cm\u00B2.");
 			System.out.println("El perímetro es " +miRectangulo.getPerimetro() +"cm.");		
-			miRectangulo.dime_caracteristicas();
 			break;
 		default: 
 			System.out.println("Opción inválida");
